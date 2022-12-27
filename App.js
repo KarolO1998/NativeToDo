@@ -7,8 +7,14 @@ export default class App extends React.Component {
   render() {
   return (
     <View style={styles.container}>
-      <Text style={{fontWeight:"300", color:colors.lightGreen }}>To DO APP</Text>
-      <StatusBar style="auto" />
+      <View style={{ flexDirection: "row" }}>
+        <View style={styles.divider} />
+        <Text style={styles.title}>
+          Whats{" "}
+          <Text style={{ fontWeight: "300", color: colors.green }}>To Do</Text>
+        </Text>
+        <View style={styles.divider} />
+      </View>
     </View>
   );
  }
@@ -21,4 +27,17 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
   },
+  divider: {
+    backgroundColor: colors.lightGreen,
+    height: 1,
+    flex: 1, 
+    alignSelf: "center",
+  },
+  title: {
+    fontSize: 38,
+    fontWeight: "800",
+    color: colors.black,
+    paddingHorizontal: 14,
+
+  }
 });

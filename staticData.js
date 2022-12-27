@@ -1,4 +1,4 @@
-export default staticData = [
+export default data = [
   {
     name: "Daily Chores",
     color: "#14d36d",
@@ -37,7 +37,7 @@ export default staticData = [
   },
   {
     name: "School",
-    color: "##ff9100",
+    color: "#ff9100",
     todos: [
       {
         title: "Attend Lecture",

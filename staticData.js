@@ -51,6 +51,10 @@ export default data = [
         title: "Finish Quiz",
         completed: false,
       },
+      {
+        title: "Graduate",
+        completed: false,
+      },
     ],
   },
 ];

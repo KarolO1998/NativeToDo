@@ -28,9 +28,9 @@ export default class AddListModal extends React.Component {
   createTodo = () => {
     const { name, color } = this.state;
 
-    const list = { name, color }
-    
-    this.props.addList(list)
+    const list = { name, color };
+
+    this.props.addList(list);
 
     this.setState({ name: "" });
     this.props.closeModal();
@@ -55,7 +55,7 @@ export default class AddListModal extends React.Component {
           <AntDesign name="close" size={24} color={colors.black} />
         </TouchableOpacity>
 
-        <View style={{ alignSelf: "center", alignContent: "center" }}>
+        <View style={{ alignItems: "center", alignContent: "center" }}>
           <Text style={styles.title}>Create ToDo List</Text>
           <TextInput
             style={styles.input}
@@ -64,7 +64,7 @@ export default class AddListModal extends React.Component {
           />
           <View
             style={{
-              flexDirector: "row",
+              flexDirection: "row",
               justifyContent: "space-between",
               marginTop: 12,
             }}
@@ -72,7 +72,8 @@ export default class AddListModal extends React.Component {
             {this.renderColors()}
           </View>
           <TouchableOpacity
-            style={[styles.create, { backgroundColor: this.state.color }]} onPress={this.createTodo}
+            style={[styles.create, { backgroundColor: this.state.color }]}
+            onPress={this.createTodo}
           >
             <Text style={{ color: colors.white, fontWeight: "600" }}>
               Create!

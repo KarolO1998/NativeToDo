@@ -1,14 +1,14 @@
 import React from "react";
 import { StyleSheet, Text, View, TouchableOpacity, Modal } from "react-native";
 import colors from "../Colors";
-import TodoModal from "../components/TodoModal"
+import TodoModal from "../components/TodoModal";
 
 export default class TodoList extends React.Component {
   state = {
     showListVisable: false,
   };
   toggleisModal() {
-    this.setState({ showListVisable: !this.state.showListVisbale });
+    this.setState({ showListVisable: !this.state.showListVisable });
   }
   render() {
     const list = this.props.list;
@@ -21,7 +21,11 @@ export default class TodoList extends React.Component {
           visible={this.state.showListVisable}
           onRequestClose={() => this.toggleisModal()}
         >
-          <TodoModal list={list} closeModal={() => this.toggleisModal() } />
+          <TodoModal
+            list={list}
+            closeModal={() => this.toggleisModal()}
+            updateList={this.props.updateList}
+          />
         </Modal>
         <TouchableOpacity
           style={[styles.listContainer, { backgroundColor: list.color }]}

@@ -1,5 +1,6 @@
 export default data = [
   {
+    id:1,
     name: "Daily Chores",
     color: "#14d36d",
     todos: [
@@ -18,6 +19,7 @@ export default data = [
     ],
   },
   {
+    id: 2,
     name: "Work Errands",
     color: "#bf14e3",
     todos: [
@@ -36,6 +38,7 @@ export default data = [
     ],
   },
   {
+    id: 3,
     name: "School",
     color: "#ff9100",
     todos: [
@@ -49,6 +52,10 @@ export default data = [
       },
       {
         title: "Finish Quiz",
+        completed: false,
+      },
+      {
+        title: "Graduate",
         completed: false,
       },
     ],
